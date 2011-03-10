@@ -1,9 +1,9 @@
 %define upstream_name    Package-Stash-XS
-%define upstream_version 0.21
+%define upstream_version 0.22
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Faster and more correct implementation of the Package::Stash API
 License:    GPL+ or Artistic
