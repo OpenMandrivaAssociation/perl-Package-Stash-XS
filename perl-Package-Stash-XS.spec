@@ -47,3 +47,34 @@ rm -rf %buildroot
 %perl_vendorlib/*
 
 
+
+
+%changelog
+* Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 0.220.0-4mdv2012.0
++ Revision: 765581
+- rebuilt for perl-5.14.2
+
+* Sat Jan 21 2012 Oden Eriksson <oeriksson@mandriva.com> 0.220.0-3
++ Revision: 764092
+- rebuilt for perl-5.14.x
+
+* Wed May 04 2011 Oden Eriksson <oeriksson@mandriva.com> 0.220.0-2
++ Revision: 667286
+- mass rebuild
+
+* Thu Mar 10 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.220.0-1
++ Revision: 643416
+- update to new version 0.22
+
+* Mon Feb 28 2011 Funda Wang <fwang@mandriva.org> 0.210.0-2
++ Revision: 640776
+- rebuild to obsolete old packages
+
+* Wed Feb 02 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.210.0-1
++ Revision: 635207
+- update to new version 0.21
+
+* Wed Jan 26 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.200.0-1
++ Revision: 633014
+- import perl-Package-Stash-XS
+
