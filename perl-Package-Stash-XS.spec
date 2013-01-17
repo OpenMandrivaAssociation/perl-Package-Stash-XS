@@ -13,6 +13,7 @@ Source0:    http://www.cpan.org/modules/by-module/Package/%{upstream_name}-%{ups
 
 BuildRequires: perl(Test::Fatal)
 BuildRequires: perl(Test::More)
+BuildRequires: perl(Test::Requires)
 BuildRequires: perl-devel
 
 %description
