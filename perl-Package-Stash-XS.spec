@@ -1,9 +1,9 @@
 %define upstream_name    Package-Stash-XS
-%define upstream_version 0.22
+%define upstream_version 0.26
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 4
+Release:    1
 
 Summary:    Faster and more correct implementation of the Package::Stash API
 License:    GPL+ or Artistic
@@ -14,7 +14,6 @@ Source0:    http://www.cpan.org/modules/by-module/Package/%{upstream_name}-%{ups
 BuildRequires: perl(Test::Fatal)
 BuildRequires: perl(Test::More)
 BuildRequires: perl-devel
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This is a backend for the Package::Stash manpage, which provides the
@@ -34,11 +33,7 @@ with a compiler.
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
-
-%clean
-rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
