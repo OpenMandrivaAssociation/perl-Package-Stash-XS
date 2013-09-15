@@ -1,20 +1,18 @@
-%define upstream_name    Package-Stash-XS
-%define upstream_version 0.26
+%define modname	Package-Stash-XS
+%define modver	0.26
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    2
-
-Summary:    Faster and more correct implementation of the Package::Stash API
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Package/%{upstream_name}-%{upstream_version}.tar.gz
-
-BuildRequires: perl(Test::Fatal)
-BuildRequires: perl(Test::More)
-BuildRequires: perl(Test::Requires)
-BuildRequires: perl-devel
+Summary:	Faster and more correct implementation of the Package::Stash API
+Name:		perl-%{modname}
+Version:	%perl_convert_version %{modver}
+Release:	2
+License:	GPLv2+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/Package/%{modname}-%{modver}.tar.gz
+BuildRequires:	perl(Test::Fatal)
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Test::Requires)
+BuildRequires:	perl-devel
 
 %description
 This is a backend for the Package::Stash manpage, which provides the
@@ -23,11 +21,10 @@ by default if it's installed, and should be preferred in all environments
 with a compiler.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -qn %{modname}-%{modver}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
+%__perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -37,40 +34,7 @@ with a compiler.
 %makeinstall_std
 
 %files
-%defattr(-,root,root)
 %doc README Changes LICENSE META.yml META.json
+%{perl_vendorlib}/*
 %{_mandir}/man3/*
-%perl_vendorlib/*
-
-
-
-
-%changelog
-* Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 0.220.0-4mdv2012.0
-+ Revision: 765581
-- rebuilt for perl-5.14.2
-
-* Sat Jan 21 2012 Oden Eriksson <oeriksson@mandriva.com> 0.220.0-3
-+ Revision: 764092
-- rebuilt for perl-5.14.x
-
-* Wed May 04 2011 Oden Eriksson <oeriksson@mandriva.com> 0.220.0-2
-+ Revision: 667286
-- mass rebuild
-
-* Thu Mar 10 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.220.0-1
-+ Revision: 643416
-- update to new version 0.22
-
-* Mon Feb 28 2011 Funda Wang <fwang@mandriva.org> 0.210.0-2
-+ Revision: 640776
-- rebuild to obsolete old packages
-
-* Wed Feb 02 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.210.0-1
-+ Revision: 635207
-- update to new version 0.21
-
-* Wed Jan 26 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.200.0-1
-+ Revision: 633014
-- import perl-Package-Stash-XS
 
