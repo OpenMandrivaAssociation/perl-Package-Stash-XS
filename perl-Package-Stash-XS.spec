@@ -1,14 +1,14 @@
 %define modname	Package-Stash-XS
-%define modver	0.26
+%define modver 0.28
 
 Summary:	Faster and more correct implementation of the Package::Stash API
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Package/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Package/Package-Stash-XS-%{modver}.tar.gz
 BuildRequires:	perl(Test::Fatal)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::Requires)
@@ -37,4 +37,5 @@ with a compiler.
 %doc README Changes LICENSE META.yml META.json
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+
 
