@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    2
+Release:    3
 
 Summary:    Faster and more correct implementation of the Package::Stash API
 License:    GPL+ or Artistic
