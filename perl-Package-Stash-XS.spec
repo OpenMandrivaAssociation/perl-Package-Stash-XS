@@ -1,5 +1,5 @@
 %define modname	Package-Stash-XS
-%define modver 0.29
+%define modver 0.30
 
 Summary:	Faster and more correct implementation of the Package::Stash API
 Name:		perl-%{modname}
