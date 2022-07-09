@@ -1,5 +1,9 @@
 %define modname	Package-Stash-XS
 %define modver 0.30
+%ifarch %{x86_64}
+# FIXME bug
+%global _debugsource_template %{nil}
+%endif
 
 Summary:	Faster and more correct implementation of the Package::Stash API
 Name:		perl-%{modname}
