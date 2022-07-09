@@ -12,6 +12,7 @@ Source0:	http://www.cpan.org/modules/by-module/Package/Package-Stash-XS-%{modver
 BuildRequires:	perl(Test::Fatal)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::Requires)
+BuildRequires:	perl(Test::Needs)
 BuildRequires:	perl-devel
 
 %description
