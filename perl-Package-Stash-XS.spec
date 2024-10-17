@@ -11,7 +11,7 @@ Version:	%perl_convert_version %{modver}
 Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Package::Stash::XS
+Url:		https://metacpan.org/pod/Package::Stash::XS
 Source0:	http://www.cpan.org/modules/by-module/Package/Package-Stash-XS-%{modver}.tar.gz
 BuildRequires:	perl(Test::Fatal)
 BuildRequires:	perl(Test::More)
