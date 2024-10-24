@@ -1,18 +1,13 @@
 %define modname	Package-Stash-XS
-%define modver 0.30
-%ifarch %{x86_64}
-# FIXME bug
-%global _debugsource_template %{nil}
-%endif
 
 Summary:	Faster and more correct implementation of the Package::Stash API
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	4
+Version:	0.30
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Package::Stash::XS
-Source0:	http://www.cpan.org/modules/by-module/Package/Package-Stash-XS-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Package/Package-Stash-XS-%{version}.tar.gz
 BuildRequires:	perl(Test::Fatal)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::Requires)
@@ -26,17 +21,17 @@ by default if it's installed, and should be preferred in all environments
 with a compiler.
 
 %prep
-%autosetup -p1 -n %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
-%make test
+%make_build test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README Changes LICENSE META.yml META.json
