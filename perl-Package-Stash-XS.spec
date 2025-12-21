@@ -3,7 +3,7 @@
 Summary:	Faster and more correct implementation of the Package::Stash API
 Name:		perl-%{modname}
 Version:	0.30
-Release:	2
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Package::Stash::XS
